@@ -50,7 +50,7 @@ body {
 
 .game-price{
 	position:absolute;
-	bottom:100px;
+	bottom:120px;
 	right:15px;
 	background:#3b7e14;
 	color:#fff;
@@ -81,4 +81,9 @@ body {
 	padding-top:20px;
 }
 
-
+.qty{
+	width: 40px;
+	color: #666 !important;
+	text-align: center;
+	margin-bottom: 20px;
+}
