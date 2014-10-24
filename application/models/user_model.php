@@ -11,4 +11,18 @@ class User_model extends CI_Model{
 		 $insert = $this->db->insert('users', $data);
 		 return $insert;
 	}
+
+	public function login($username,$password){  
+        //Validate
+        $this->db->where('username',$username);
+        $this->db->where('password',$password);
+        
+        $result = $this->db->get('users');
+        if($result->num_rows() == 1){
+            return $result->row(0)->id;
+        } else {
+            return false;
+        }
+    }
+
 }
