@@ -45,4 +45,12 @@ class Product_model extends CI_Model{
 		return $query->result();
 	}
 
-}
+	/*
+	* Add Order to Database
+	*/
+	public function add_order($order_data){
+		$insert = $this->db->insert('orders', $order_data);
+		return $insert;
+	}
+
+}	
